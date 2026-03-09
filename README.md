@@ -18,7 +18,7 @@
 - [The Challenge](#-the-challenge)
 - [Quick Architecture Overview](#-quick-architecture-overview)
 - [Data Model Architecture](#-data-model-architecture)
-- [Power Query Transformations](#-power-query-transformations)
+- [Power Query Transformations](#power-query)
 - [Relationship Design](#-relationship-design)
 - [Hierarchies Implemented](#-hierarchies-implemented)
 - [Testing the Model](#-testing-the-model)
@@ -119,6 +119,7 @@ This structure enables **fast filtering, aggregation, and scalable reporting**.
 
 ---
 
+<a id="power-query"></a>
 # ⚙️ POWER QUERY TRANSFORMATIONS
 
 ![Power Query Flow](images/power_query.png)
