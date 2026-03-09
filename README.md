@@ -12,6 +12,21 @@
 ![Analytics](https://img.shields.io/badge/Domain-Business%20Intelligence-purple)
 ![Repository Views](https://komarev.com/ghpvc/?username=ParthShah7099&color=blue)
 
+## 📚 Table of Contents
+
+- [The Story](#-the-story)
+- [The Challenge](#-the-challenge)
+- [Quick Architecture Overview](#-quick-architecture-overview)
+- [Data Model Architecture](#-data-model-architecture)
+- [Power Query Transformations](#-power-query-transformations)
+- [Relationship Design](#-relationship-design)
+- [Hierarchies Implemented](#-hierarchies-implemented)
+- [Testing the Model](#-testing-the-model)
+- [Model Verification](#-model-verification)
+- [Data Dictionary](#-data-dictionary)
+- [Lessons Learned](#-lessons-learned)
+- [Future Improvements](#-future-improvements)
+- [Project Structure](#-project-structure)
 
 ![Social Preview](images/social_preview.png)
 
@@ -65,6 +80,24 @@ The objective was simple:
 
 ---
 
+# ⚡ Quick Architecture Overview
+
+<div align="center">
+
+### Excel Data Sources
+ ↓ 
+### Power Query (ETL)
+ ↓
+### Data Cleaning & Type Conversion
+ ↓
+### Dimensional Modeling
+ ↓
+### Star Schema Data Model
+ ↓
+### Power BI Analysis
+</div>
+
+---
 # 🧠 DATA MODEL ARCHITECTURE
 
 ![Star Schema](images/schema.png)
@@ -202,6 +235,23 @@ These hierarchies create **structured analytical navigation**.
 
 ---
 
+# 🧪 Testing the Model
+
+To verify the correctness of relationships and hierarchy structures, a **Matrix visual** was used inside Power BI.
+
+### Test Scenarios
+
+• Sales aggregated by **Product Category and Region**  
+• Return reasons analyzed by **Fiscal Year**  
+• Revenue grouped by **Customer Segment**
+
+These tests confirmed that:
+
+- filter propagation works correctly  
+- dimensional hierarchies function as expected  
+- the star schema relationships behave consistently during aggregation
+
+---
 # 📊 MODEL VERIFICATION
 
 Although the assignment required **no visual dashboards**, a **Matrix Table** was used to verify filter flow.
@@ -213,6 +263,19 @@ Validation scenarios included:
 ✔ Revenue aggregated by **Customer Segment**
 
 This ensured relationships and hierarchies function correctly.
+
+---
+
+# 📘 Data Dictionary
+
+| Column | Table | Description |
+|------|------|-------------|
+| CustomerID | Customer_Dim | Unique customer identifier |
+| ProductID | Product_Dim | Unique product identifier |
+| RegionID | Region_Dim | Geographic region identifier |
+| DateKey | Date_Dim | Calendar date key |
+| SalesID | Sales_Fact | Transaction identifier |
+| ReturnID | Returns_Fact | Return transaction identifier |
 
 ---
 
@@ -238,6 +301,8 @@ Data_Modeler/
 ├── Data_Modeler.pbix
 ├── Data_Modeler_Project_Report.pdf
 ├── README.md
+├── LICENSE
+├── .gitignore
 │
 ├── datasets/
 │   ├── Sales_Fact.xlsx
@@ -309,6 +374,31 @@ and someone who **engineers intelligence**.
 
 ---
 
+# 📚 Lessons Learned
+
+Building this project reinforced several important BI modeling principles:
+
+• Star schemas simplify analytical queries and reporting.  
+• Correct primary and foreign keys prevent ambiguous relationships.  
+• Inactive relationships help resolve multiple filter paths.  
+• Hierarchies allow structured drill-down analysis.
+
+These practices form the foundation of scalable Business Intelligence systems.
+
+---
+
+# 🚀 Future Improvements
+
+Possible extensions of this project include:
+
+• Creating interactive dashboards based on the model  
+• Adding advanced DAX measures for deeper analytics  
+• Integrating additional fact tables  
+• Automating data ingestion pipelines
+
+These improvements would transform the model into a complete end-to-end BI solution.
+
+---
 # 👑 THE PARTH SHAH SIGNATURE
 
 I don't just build projects.
